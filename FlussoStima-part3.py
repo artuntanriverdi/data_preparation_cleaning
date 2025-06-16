@@ -1,3 +1,19 @@
+"""
+Data Preparation and Cleaning - Part 3
+
+This script loads pharmaceutical sales and matching datasets, performs data cleaning,
+applies conditional categorization (split groups), handles outliers, imputes missing values
+based on group means, removes duplicates, and prepares a cleaned dataset ready for analysis.
+
+- Loads 'full_match3' and 'sales6' data from pickle files.
+- Renames columns for standardization.
+- Removes duplicate entries based on 'minsal_phy_id'.
+- Categorizes records into split groups based on sales figures and invoice flags.
+- Handles outliers by setting extreme values to NaN.
+- Creates indicators for missing values and imputes them using group means.
+- Ensures data is sorted and merged properly for downstream use.
+"""
+
 import pandas as pd
 import os
 
